@@ -106,6 +106,12 @@ namespace Snoop.Converters
 
 		public static string FindNameFromResource(ResourceDictionary dictionary, object resourceItem)
 		{
+            if (resourceItem is DependencyObject && (resourceItem as DependencyObject).IsSealed)
+                return null;
+
+            if (resourceItem is Style && (resourceItem as Style).IsSealed)
+                return null;
+
 			foreach (object key in dictionary.Keys)
 			{
 				if (dictionary[key] == resourceItem)

@@ -1,0 +1,9 @@
+*.user
+bin
+obj
+Debug
+_ReSharper.Snoop
+Build
+Intermediate
+Snoop.sdf
+Snoop.suo
